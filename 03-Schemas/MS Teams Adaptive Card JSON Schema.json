@@ -1,0 +1,140 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Hello @{triggerBody()?['ManagerName']},"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "This is to inform you as a manager that the AARP network account account for the user below will expire in the next @{triggerBody()?['AccountExpiration_x0028_inDays_x']} days. You can extend the account for the person below for 30, 60, and 90 days.",
+                            "wrap": true
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "If rejecting the extension, choose 0 and then please ensure that a corresponding request to offboard is submitted in the Resource Termination area in Navigator with the user’s last day.",
+                            "wrap": true
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+{
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Please ensure contractor extensions are within approved guidelines prior to approval.",
+                            "wrap": true
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "If you have any questions, please contact the Help Desk via Teams Chat or call 1-888-925-2002.",
+                            "wrap": true
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "weight": "bolder",
+            "text": "User: @{triggerBody()?['FullName']}:",
+            "wrap": true
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "id": "action",
+            "choices": [
+                {
+                    "title": "Extend",
+                    "value": "enable"
+                },
+                {
+                    "title": "Not to be extended",
+                    "value": "disable"
+                }
+            ],
+           "isRequired": true
+        },                               
+        {
+            "type": "Input.ChoiceSet",
+            "id": "days",
+            "choices": [
+            {
+                    "title": "0",
+                    "value": "0"
+                },
+                {
+                    "title": "30",
+                    "value": "30"
+                },
+                {
+                    "title": "60",
+                    "value": "60"
+                },
+                {
+                    "title": "90",
+                    "value": "90"
+                }
+            ],
+            "placeholder": "Select Number of Days",
+            "label": "Select Number of Days, account to be extended:",
+            "isRequired": true
+        },
+        {
+      "type": "Input.Text",
+      "id": "businessJustification",
+      "label": "Business Justification",
+      "isRequired": true,
+      "placeholder": "Enter the reason for extension",
+      "isMultiline": true
+    }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Submit"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3"
+}
