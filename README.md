@@ -1,0 +1,2 @@
+# Automated-AD-Account-Expiration-Renewal-Pipeline
+This end-to-end operational pipeline automates Active Directory user account expiration tracking, manager approvals, escalation, and lifecycle updates. By integrating on-premises AD, SharePoint Online, PowerAutomate, Teams Adaptive Cards, and SNow ITSM, it cuts manual IT overhead, enforces strict auditability, and reduces unauthorized access risks.
