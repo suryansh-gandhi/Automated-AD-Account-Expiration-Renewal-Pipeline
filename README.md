@@ -1,5 +1,3 @@
-Here is the complete, formatted `README.md` file wrapped in a single code block. You can click the copy button in the top right corner of the block and paste it directly into your GitHub repository or VS Code editor without losing formatting.
-
 # Enterprise Identity Governance: Automated AD Account Expiration & Renewal Pipeline
 
 ## 1. Executive Summary
